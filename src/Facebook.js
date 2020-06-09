@@ -1,6 +1,5 @@
 import React from "react";
 import db from "./firebase";
-import "./facebook.css";
 import Card from "react-bootstrap/Card";
 
 // These props are destructured from the Firebase field names.
