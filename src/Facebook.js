@@ -1,21 +1,23 @@
 import React from 'react';
 import db from './firebase';
+import './facebook.css';
+import Card from 'react-bootstrap/Card';
 
 // These props are destructured from the Firebase field names.
 const ProfileBox = ({city, imageUrl, name, profile, userId }) => {
   return (
-    <div>
-      <div>
-      {name}
-        </div>
-      <div>
-      {city}
-        </div>
-      <div>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={imageUrl} />
+  <Card.Body>
+    <Card.Title>{name}</Card.Title>
+    <Card.Text>
       {profile}
-        </div>
-      <img src={imageUrl} alt={name}/>
-      </div>
+    </Card.Text>
+    <Card.Text>
+      {city}
+    </Card.Text>
+  </Card.Body>
+    </Card>
   );
 };
 
