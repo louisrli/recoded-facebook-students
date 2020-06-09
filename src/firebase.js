@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import firebase from "firebase";
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
@@ -8,7 +8,7 @@ var firebaseConfig = {
   projectId: "recodedfacebook",
   storageBucket: "recodedfacebook.appspot.com",
   messagingSenderId: "792119652578",
-  appId: "1:792119652578:web:6f456d9c56b5bf6c876ebb"
+  appId: "1:792119652578:web:6f456d9c56b5bf6c876ebb",
 };
 
 // Initialize Firebase
