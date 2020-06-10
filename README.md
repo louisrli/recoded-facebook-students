@@ -41,7 +41,7 @@ Please use React Bootstrap to implement this form. The package has been installe
 - There is an image in the code directory for the Google Button. This image should be used as the button. You may want to review learn.co or look up how to use an image in React.
 - When clicked, it should use Firebase Auth in order to retrieve the information about this Google account. Some of this information will be used in a later step (see _Submit Button_). I'm being intentionally vague about the fields that you have to use; you will have to inspect the post-authentication output yourself.
 
-### Submit Button
+#### Submit Button
 
 The Firebase Database, which only I can see, accepts the following fields.
 
