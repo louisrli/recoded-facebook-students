@@ -1,68 +1,65 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Re:Coded Facebook
+In this project, we will be writing the Re:Coded Facebook.
 
-## Available Scripts
+It is composed of two parts:
+1. A signup page (you write this)
+2. [A page to view the members](https://recodedfacebook.web.app/facebook) (I wrote this)
 
-In the project directory, you can run:
+## Learning Goals
+* Practice open-endedness and debugging
+* Learn to authenticate a user using Firebase Auth Google Account sign-in
+* Learn to use React Bootstrap (if you haven't already)
+* Generate billions of dollars (50-50 between me...and Ammar. We'll buy each of you a döner when we sell, to thank you for your hard work)
 
-### `yarn start`
+## Requirements
+The signup page should work as follows.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Technology
+* Firebase
+* React Bootstrap
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Form fields
+There are exactly four items.
 
-### `yarn test`
+Please use React Bootstrap to implement this form. The package has been installed for you already. You are expected to read the React Bootstrap documentation (not to be confused with normal bootstrap).
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. A login with Google button. 
+2. A text box for city
+3. A text box for profile ("I'm a really cool guy")
+4. A submit button
 
-### `yarn build`
+(2) and (3) are fairly straight forward. (1) and (4) are further explained below.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Google Button
+* There is an image in the code directory for the Google Button. This image should be used as the button. You may want to review learn.co or look up how to use an image in React.
+* When clicked, it should use Firebase Auth in order to retrieve the information about this Google account. Some of this information will be used in a later step (see *Submit Button*). I'm being intentionally vague about the fields that you have to use; you will have to inspect the post-authentication output yourself.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Submit Button
+The Firebase Database, which only I can see, accepts the following fields.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* `city`: The value in the "city" form field.
+* `name`: The value in the "user" form field.
+* `userId`: The unique user ID (available via Google. Please don't make a user ID yourself).
+* `imageUrl`: The Google profile picture of the image (available via Google).
 
-### `yarn eject`
+Please read these field names very carefully, as Firebase will crash if you try to insert any fields that you didn't specify.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Optional
+If the user is logged in with Google, hide the Google button and show their email.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Submission
+Please create a REPL or a **private** Github repository. Please send Ammar and I the link at the beginning of the first working session.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Finishing Early
+If you finish early, you will be given Github access to the super secret, proprietary, once-in-a-millenium implementation of the Re:Coded Facebook itself, and you may work as you desire on styling it (though if multiple people finish you will have to find a way to collaborate on features without stepping on each other).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Appendix
 
-## Learn More
+### The Rules
+As mentioned previously in class, the purpose of this exercise is to challenge our ability to tackle ambiguity and strengthen our individual coding skills. While certainly there is a feeling of satisfaction from completion, no one will judge you on whether you do or don't complete this activity over the many sessions that we do in class.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I realize these are fairly strict rules, but you will have to give some trust to Ammar and I as your instructors when we emphasize the importance of being able to operate individually in coding.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* **No asking a human questions on how to fix something.** The only exception is in the first class if you have some setup issues on your machine; for some reason the app is not running.
+* **No sharing of code.** No one should ever see your code (valuable intellectual property) unless both people have completed the activity.
+* **No sharing of approaches.** There should be no discussion about how someone did this or that, unless both people have completed the activity.
