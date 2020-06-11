@@ -43,7 +43,7 @@ Please use React Bootstrap to implement this form. The package has been installe
 
 #### Submit Button
 
-The Firebase Database, which only I can see, accepts the following fields.
+The Firebase Database, which only I can see, accepts the following fields. The document ID should be the ID of the user.
 
 - `city`: The value in the "city" form field.
 - `name`: The value in the "user" form field.
