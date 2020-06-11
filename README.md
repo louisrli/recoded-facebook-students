@@ -46,9 +46,10 @@ Please use React Bootstrap to implement this form. The package has been installe
 The Firebase Database, which only I can see, accepts the following fields. The document ID should be the ID of the user. THe collection name is `profiles`.
 
 - `city`: The value in the "city" form field.
-- `name`: The value in the "user" form field.
+- `name`: The name in Google for the account
 - `userId`: The unique user ID (available via Google. Please don't make a user ID yourself).
 - `imageUrl`: The Google profile picture of the image (available via Google).
+- `profile`: The value of the profile form field
 
 Please read these field names very carefully, as Firebase will crash if you try to insert any fields that you didn't specify.
 
