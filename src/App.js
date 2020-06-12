@@ -10,7 +10,7 @@ function App() {
     <Container>
       <Router>
         <Switch>
-          <Route path={"/signup"} component={SignUpPage} />
+          <Route path={"/helloworld"} component={SignUpPage} />
           <Route path={"/facebook"} component={FacebookPage} />
         </Switch>
       </Router>
