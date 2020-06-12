@@ -17,7 +17,6 @@ const SignUpPage = () => {
       .auth()
       .signInWithPopup(provider)
       .then(function (result) {
-        const token = result.credential.accessToken;
         const user = result.user;
         setUser(user);
       })
